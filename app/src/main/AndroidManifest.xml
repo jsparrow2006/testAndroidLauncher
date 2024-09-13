@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dashinglauncher"
+    >
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DashingLauncher"
+        tools:targetApi="31">
+        <activity
+            android:exported="true"
+            android:name="com.example.dashinglauncher.MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <meta-data
+                android:name="flagActivityFullScreen"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.example.dashinglauncher.HOME" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--package="com.example.testlauncher">-->
+<!--<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />-->
+
+<!--<application-->
+<!--    android:allowBackup="true"-->
+<!--    android:icon="@mipmap/ic_launcher"-->
+<!--    android:label="@string/app_name"-->
+<!--    android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--    android:theme="@style/AppTheme"-->
+<!--    android:supportsRtl="true">-->
+<!--    <activity-->
+<!--        android:exported="true"-->
+<!--        android:name="com.example.testlauncher.MainActivity"-->
+<!--        android:launchMode="singleInstance"-->
+<!--        android:screenOrientation="landscape"-->
+<!--        android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
+<!--            <category android:name="android.intent.category.HOME"/>-->
+<!--            <category android:name="android.intent.category.DEFAULT"/>-->
+<!--            <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            <action android:name="com.example.testlauncher.HOME" />-->
+<!--        </intent-filter>-->
+<!--    </activity>-->
+<!--</application>-->
+
+<!--</manifest>-->
+
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:sharedUserId="android.uid.system"-->
+<!--android:versionCode="20005000"-->
+<!--android:versionName="2.0.5.ov"-->
+<!--android:compileSdkVersion="29"-->
+<!--android:compileSdkVersionCodename="10"-->
+<!--package="com.wt.launcher3"-->
+<!--platformBuildVersionCode="29"-->
+<!--platformBuildVersionName="10">-->
+<!--<uses-sdk-->
+<!--    android:minSdkVersion="26"-->
+<!--    android:targetSdkVersion="29"/>-->
+<!--<uses-permission android:name="android.permission.VIBRATE"/>-->
+<!--<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>-->
+<!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+<!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+<!--<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>-->
+<!--<uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>-->
+<!--<uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>-->
+<!--<uses-permission android:name="android.permission.WRITE_SETTINGS"/>-->
+<!--<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>-->
+<!--<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>-->
+<!--<uses-permission android:name="android.permission.REMOVE_TASKS"/>-->
+<!--<uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>-->
+<!--<uses-permission android:name="android.permission.INJECT_EVENTS"/>-->
+<!--<permission android:name="com.tinnove.aiassistant.Permission"/>-->
+<!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
+<!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+<!--<uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+<!--<uses-permission android:name="com.tencent.wecarspeech.vframework.PROVIDER"/>-->
+<!--<uses-permission android:name="com.tencent.wecar.vframework.PROVIDER"/>-->
+<!--<uses-permission android:name="com.tencent.wecarspeech.vframework.SYSTEM_EVENT"/>-->
+<!--<uses-permission android:name="com.tencent.wecar.vframework.SYSTEM_EVENT"/>-->
+<!--<uses-permission android:name="com.tencent.wecarspeech.vframework.WECARSPEECH_COME_ALIVE"/>-->
+<!--<uses-permission android:name="com.tencent.wecar.vframework.WECARSPEECH_COME_ALIVE"/>-->
+<!--<uses-permission android:name="com.tinnove.aiassistant.Permission"/>-->
+<!--<application-->
+<!--    android:theme="@style/WallpaperTheme"-->
+<!--    android:label="@string/app_name"-->
+<!--    android:icon="@mipmap/ic_launcher"-->
+<!--    android:name="com.wt.launcher3.App"-->
+<!--    android:persistent="true"-->
+<!--    android:debuggable="true"-->
+<!--    android:allowBackup="true"-->
+<!--    android:hardwareAccelerated="true"-->
+<!--    android:supportsRtl="false"-->
+<!--    android:extractNativeLibs="false"-->
+<!--    android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--    android:appComponentFactory="androidx.core.app.CoreComponentFactory">-->
+<!--    <activity-->
+<!--        android:name="com.wt.launcher3.MainActivity"-->
+<!--        android:launchMode="singleInstance"-->
+<!--        android:screenOrientation="landscape"-->
+<!--        android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">-->
+<!--        <meta-data-->
+<!--            android:name="flagActivityFullScreen"-->
+<!--            android:value="true"/>-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN"/>-->
+<!--            <category android:name="android.intent.category.HOME"/>-->
+<!--            <category android:name="android.intent.category.DEFAULT"/>-->
+<!--            <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            <action android:name="com.wt.launcher3.HOME"/>-->
+<!--        </intent-filter>-->
+<!--    </activity>-->
+<!--    <activity-->
+<!--        android:theme="@style/SlideAnimation"-->
+<!--        android:name="com.wt.launcher3.applist.classical.AppListActivity"-->
+<!--        android:launchMode="singleInstance"-->
+<!--        android:screenOrientation="landscape"/>-->
+<!--    <provider-->
+<!--        android:name="com.wt.launcher3.provider.MyProvider"-->
+<!--        android:exported="true"-->
+<!--        android:authorities="com.wt.launcher3"/>-->
+<!--    <receiver-->
+<!--        android:name="com.tencent.wecarspeech.clientsdk.receiver.SystemEventReceiver"-->
+<!--        android:permission="com.tencent.wecarspeech.vframework.SYSTEM_EVENT"-->
+<!--        android:enabled="true"-->
+<!--        android:exported="true">-->
+<!--        <intent-filter android:priority="999">-->
+<!--            <action android:name="WECARSPEECH_VFRAMEWORK_BROADCAST"/>-->
+<!--        </intent-filter>-->
+<!--    </receiver>-->
+<!--    <receiver-->
+<!--        android:name="com.tencent.wecarspeech.clientsdk.receiver.WecarSystemEventReceiver"-->
+<!--        android:permission="com.tencent.wecar.vframework.SYSTEM_EVENT"-->
+<!--        android:enabled="true"-->
+<!--        android:exported="true">-->
+<!--        <intent-filter android:priority="999">-->
+<!--            <action android:name="WECARSPEECH_VFRAMEWORK_BROADCAST"/>-->
+<!--        </intent-filter>-->
+<!--    </receiver>-->
+<!--    <meta-data-->
+<!--        android:name="speech_client_sdk_version"-->
+<!--        android:value="3.0.0-3395990"/>-->
+<!--</application>-->
+<!--</manifest>-->
