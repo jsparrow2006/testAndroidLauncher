@@ -8,9 +8,8 @@
 
     <ListView
         android:id="@+id/app_list"
-        android:layout_width="0dp"
+        android:layout_width="500dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
 </LinearLayout>

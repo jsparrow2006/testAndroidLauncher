@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.dashinglauncher"
-    >
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+<!--<manifest-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    package="com.example.dashinglauncher"-->
+<!--    >-->
+<!--    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />-->
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.DashingLauncher"
-        tools:targetApi="31">
-        <activity
-            android:exported="true"
-            android:name="com.example.dashinglauncher.MainActivity"
-            android:launchMode="singleInstance"
-            android:screenOrientation="landscape"
-            android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
-            <meta-data
-                android:name="flagActivityFullScreen"
-                android:value="true"/>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="com.example.dashinglauncher.HOME" />
-            </intent-filter>
-        </activity>
-    </application>
-
-</manifest>
-
-
-<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--package="com.example.testlauncher">-->
-<!--<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />-->
-
-<!--<application-->
-<!--    android:allowBackup="true"-->
-<!--    android:icon="@mipmap/ic_launcher"-->
-<!--    android:label="@string/app_name"-->
-<!--    android:roundIcon="@mipmap/ic_launcher_round"-->
-<!--    android:theme="@style/AppTheme"-->
-<!--    android:supportsRtl="true">-->
-<!--    <activity-->
-<!--        android:exported="true"-->
-<!--        android:name="com.example.testlauncher.MainActivity"-->
-<!--        android:launchMode="singleInstance"-->
-<!--        android:screenOrientation="landscape"-->
-<!--        android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">-->
-<!--        <intent-filter>-->
-<!--            <action android:name="android.intent.action.MAIN" />-->
-<!--            <category android:name="android.intent.category.HOME"/>-->
-<!--            <category android:name="android.intent.category.DEFAULT"/>-->
-<!--            <category android:name="android.intent.category.LAUNCHER"/>-->
-<!--            <action android:name="com.example.testlauncher.HOME" />-->
-<!--        </intent-filter>-->
-<!--    </activity>-->
-<!--</application>-->
+<!--    <application-->
+<!--        android:allowBackup="true"-->
+<!--        android:dataExtractionRules="@xml/data_extraction_rules"-->
+<!--        android:fullBackupContent="@xml/backup_rules"-->
+<!--        android:icon="@mipmap/ic_launcher"-->
+<!--        android:label="@string/app_name"-->
+<!--        android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--        android:supportsRtl="true"-->
+<!--        android:theme="@style/Theme.DashingLauncher"-->
+<!--        tools:targetApi="31">-->
+<!--        <activity-->
+<!--            android:exported="true"-->
+<!--            android:name="com.example.dashinglauncher.MainActivity"-->
+<!--            android:launchMode="singleInstance"-->
+<!--            android:screenOrientation="landscape"-->
+<!--            android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">-->
+<!--            <meta-data-->
+<!--                android:name="flagActivityFullScreen"-->
+<!--                android:value="true"/>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.HOME"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--                <action android:name="com.example.dashinglauncher.HOME" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--    </application>-->
 
 <!--</manifest>-->
+
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.example.dashinglauncher">
+<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+<uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:theme="@style/Theme.DashingLauncher"
+    android:supportsRtl="true"
+    android:supportsPictureInPicture="true"
+    android:resizeableActivity="true" >
+    <activity
+        android:exported="true"
+        android:name="com.example.dashinglauncher.MainActivity"
+        android:resizeableActivity="true"
+        android:launchMode="singleInstance"
+        android:screenOrientation="landscape"
+        android:configChanges="layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.HOME"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+            <action android:name="com.example.dashinglauncher.HOME" />
+        </intent-filter>
+    </activity>
+</application>
+
+</manifest>
 
 <!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--android:sharedUserId="android.uid.system"-->
