@@ -3,20 +3,21 @@ package com.example.dashinglauncher
 import android.app.ActivityOptions
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.PixelFormat
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.view.WindowManager
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.customlauncher.FloatingWindowManager
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val floatingWindowManager = FloatingWindowManager(this)
 
         val listView: ListView = findViewById(R.id.app_list)
         val packageManager: PackageManager = packageManager
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = AppAdapter(this, apps)
         listView.setOnItemClickListener { _, _, position, _ ->
             val app = apps[position]
-            launchAppInRightArea(app.packageName)
+//            launchAppInRightArea(app.packageName)
+            floatingWindowManager.showApp(app.packageName)
         }
     }
 

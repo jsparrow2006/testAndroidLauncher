@@ -42,6 +42,8 @@
 package="com.example.dashinglauncher">
 <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 <uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<uses-permission android:name="WindowManager.TYPE_APPLICATION_OVERLAY"/>
 
 <application
     android:allowBackup="true"
@@ -67,6 +69,12 @@ package="com.example.dashinglauncher">
             <action android:name="com.example.dashinglauncher.HOME" />
         </intent-filter>
     </activity>
+<!--    <activity-->
+<!--        android:name=".FloatingActivity"-->
+<!--        android:theme="@style/Theme.AppCompat.NoActionBar"-->
+<!--        android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--        android:screenOrientation="landscape">-->
+<!--    </activity>-->
 </application>
 
 </manifest>
